@@ -1,45 +1,43 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header";
-import CourseList from "./components/CourseList";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
 
       <Header />
 
       <main>
 
-        <section className="hero" id="home">
-          <div>
-            <h1>Learn Something New</h1>
+        <Routes>
 
-            <p>
-              Improve your skills with our simple and practical online courses.
-            </p>
+          <Route path="/" element={<Home />} />
 
-            <button>Explore Courses</button>
-          </div>
-        </section>
+          <Route path="/about" element={<About />} />
 
-        <CourseList />
+          <Route path="/contact" element={<Contact />} />
 
-        <section className="about" id="about">
-          <h2>Why Choose LearnHub?</h2>
+          <Route path="*" element={<NotFound />} />
 
-          <p>
-            LearnHub provides easy-to-follow courses designed to help students
-            develop useful programming and technology skills.
-          </p>
-        </section>
+        </Routes>
 
       </main>
 
-      <footer>
-        <p>© 2026 LearnHub. All Rights Reserved.</p>
+      <footer className="bg-dark text-white text-center py-3">
+        <p className="mb-0">
+          © 2026 LearnHub
+        </p>
       </footer>
 
-    </div>
+    </BrowserRouter>
   );
 }
 
