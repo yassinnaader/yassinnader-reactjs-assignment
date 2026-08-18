@@ -208,3 +208,70 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Default light mode */
+.app {
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.light {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+/* Dark mode */
+.app.dark {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Dark mode main content */
+.app.dark main {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Dark mode headings and text */
+.app.dark h1,
+.app.dark h2,
+.app.dark h3,
+.app.dark h4,
+.app.dark h5,
+.app.dark h6,
+.app.dark p {
+  color: #ffffff;
+}
+
+/* Cards in dark mode */
+.app.dark .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+/* Card text */
+.app.dark .card-title,
+.app.dark .card-text {
+  color: #ffffff;
+}
+
+/* Fix course cards in dark mode */
+.app.dark .course-card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.app.dark .course-card h1,
+.app.dark .course-card h2,
+.app.dark .course-card h3,
+.app.dark .course-card h4,
+.app.dark .course-card h5,
+.app.dark .course-card h6,
+.app.dark .course-card p,
+.app.dark .course-card span,
+.app.dark .course-card a {
+  color: #ffffff !important;
+}
